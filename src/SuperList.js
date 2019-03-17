@@ -5,11 +5,8 @@ export default class SuperList extends Component {
 
   updateItem = item => {
     this.setState(state => ({
-      items: state.items.map(
-        _item =>
-          _item.id === item.id
-            ? { ...item, name: item.name.toUpperCase() }
-            : item
+      items: state.items.map(_item =>
+        _item.id === item.id ? { ...item, name: item.name.toUpperCase() } : item
       )
     }))
   }
